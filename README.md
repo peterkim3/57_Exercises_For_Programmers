@@ -4,7 +4,7 @@ This repository is an answer to the exercises in the book "Exercises for Program
 
 Made with Python
 
-References
-https://github.com/kasp470f/57-exercises-for-programmers
+References  
 
+https://github.com/kasp470f/57-exercises-for-programmers  
 https://github.com/kauluka/57-Exercises-for-Programmers-Brian-Hogan
