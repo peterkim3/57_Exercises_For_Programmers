@@ -28,6 +28,43 @@ numeric values. Don’t allow the user to proceed if the value entered is not nu
 clear (2) Don’t allow the user to enter a negative number.
 clear (3) Break the program into functions that do the computations.
 You’ll explore functions in Chapter 5, Functions, on page 45.
-(4) Implement this program as a GUI program 
+clear (4) Implement this program as a GUI program 
 that automatically updates the values when any value changes.
 """
+
+from tkinter import *
+
+window = Tk()
+window.title("My GUI Window")
+
+def button_pressed():
+    label_inputStr["text"] = make_answer(int(entry1.get()), int(entry2.get()))
+    label_inputStr["bg"] = "burlywood1"
+    entry1.delete(0, END)
+    entry2.delete(0, END)
+    
+entry1 = Entry(
+    master=window, fg="black", bg="yellow", width=30, justify=CENTER, font=("Arial", 25)
+)
+entry2 = Entry(
+    master=window, fg="black", bg="yellow", width=30, justify=CENTER, font=("Arial", 25)
+)
+
+label_inputStr = Label(window, text="Input String will be displayed", font=("Arial", 25))
+
+button = Button(
+    master=window,
+    text="Enter",
+    bg="white",
+    fg="blue",
+    width=80,
+    height=2,
+    command=button_pressed,
+)
+
+label_inputStr.pack()
+button.pack()
+entry1.pack()
+entry2.pack()
+    
+window.mainloop()
